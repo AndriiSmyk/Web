@@ -1,0 +1,41 @@
+table{
+    width: auto;
+    border: 3px solid black;
+}
+
+table .day{
+    background-color: #CCE5FF;
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+table .green{
+    border-bottom-width: 3px;
+    text-align: center;
+    background-color: #9bcead;
+}
+table .blue,table .blueup,table .bluepara,table .blueweekone,table .blueweektwo{
+    text-align: center;
+    background-color: #CCE5FF;
+    font-weight: bold;
+}
+
+table .blueup{
+    border-width: 3px;
+}
+
+table .bluepara{
+    border-right-width: 3px;
+    border-left-width: 3px;
+}
+
+table .blueweekone{
+    border-bottom-style: dotted;
+    border-right-width: 3px;
+}
+
+table .blueweektwo{
+    border-top-style: dotted;
+    border-right-width: 3px;
+}
