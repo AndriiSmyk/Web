@@ -1,0 +1,27 @@
+div{
+    width: 240px;
+    height: 470px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border-color: gray;
+    border-style: groove;
+}
+
+img{
+    width: 230px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.bold{
+    font-weight: bold;
+    text-align: center;
+    font-family: Calibri;
+}
+
+.default{
+    text-align: center;
+    font-family: Calibri;
+}
