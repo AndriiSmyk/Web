@@ -1,0 +1,78 @@
+.edit{
+    display: inline-block;
+    background-color: white;
+    border-radius: 15px;
+    border-color: cornflowerblue;
+    border-style: solid;
+    margin-left: auto;
+    font-size: 16px;
+    height: 35px;
+    color: cornflowerblue;
+    width: 100px;
+}
+
+.edit:hover{
+    background-color: lightgray;
+    border-radius: 15px;
+    border-color: #647fed;
+    border-style: solid;
+    margin-left: auto;
+    font-size: 16px;
+    height: 35px;
+    color: #647fed;
+}
+
+.delete{
+    background-color: white;
+    border-radius: 15px;
+    border-color: crimson;
+    border-style: solid;
+    margin-left: auto;
+    font-size: 16px;
+    height: 35px;
+    color: crimson;
+    width: 100px;
+}
+
+.delete:hover{
+    background-color: lightgray;
+    border-radius: 15px;
+    border-color: firebrick;
+    border-style: solid;
+    margin-left: auto;
+    font-size: 16px;
+    height: 35px;
+    color: firebrick;
+}
+
+.addcup{
+    background-color: rgba(0,0,0,0%);
+    color: black;
+    border-width: 0px;
+    height: 35px;
+}
+
+.addcup:hover{
+    background-color: rgba(0,0,0,10%);
+}
+
+.modal__close{
+    background: #ff0000;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.modal__close:hover{
+    background-color: red;
+}
+

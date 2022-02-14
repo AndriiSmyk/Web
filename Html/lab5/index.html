@@ -5,9 +5,40 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/buttons.css">
     <title>Modal</title>
 </head>
 <body>
-    
+    <div class="header">
+        <p style="font-weight: bold;display: inline-block;font-family: Calibri,serif">My ip-cameras</p>
+        <input type="button" value="Add ip-camera" class="addcup">
+        <input id="search" name="" placeholder="Search your ip-camera..." type="text">
+        <input type="button" class="edit" value="Search">
+        <input type="button" class="delete" value="Cansel">
+    </div>
+    <div class="modal">
+        <div class="modal_window">
+            <p class="modal-title">Ip-camera options</p>
+            <button data-hystclose class="modal__close">X</button>
+            <hr>
+            <p class="modal_text">Producer and model:</p>
+            <input type="text" name="" id="" class="producer" placeholder="Input name and model of ip-camera">
+            <p class="modal_text">Connection type:</p>
+            <select id="connect" name="connect">
+                <option value="Wi-Fi">Wi-Fi</option>
+                <option value="Ethernet">Ethernet</option>
+            </select>
+            <p class="modal_text">Resolution:</p>
+            <input type="number" name="" id="resolution" class="number" placeholder="Input resolution (Megapixels)">
+            <p class="modal_text">Size of matrix:</p>
+            <input type="number" name="" id="matrix_size" class="number" placeholder="Input size of matrix(1/x&#34;)">
+            <p class="modal_text">Focus distance:</p>
+            <input type="number" name="" id="focus_distance" class="number" placeholder="Input focus distance(mm)">
+            <p class="modal_text">Select image file:</p>
+            <input type="file" name="" id="file_input" class="file">
+            <button type="submit" class="edit" style="margin-left: auto;margin-right: auto;display: block;margin-top: 20px">Submit</button>
+        </div>
+    </div>
 </body>
 </html>
