@@ -10,35 +10,79 @@
     <title>Modal</title>
 </head>
 <body>
-    <div class="header">
+    <form class="header">
         <p style="font-weight: bold;display: inline-block;font-family: Calibri,serif">My ip-cameras</p>
-        <input type="button" value="Add ip-camera" class="addcup">
+        <input type="button" value="Add ip-camera" class="addcup" onclick="displayModal()">
         <input id="search" name="" placeholder="Search your ip-camera..." type="text">
         <input type="button" class="edit" value="Search">
         <input type="button" class="delete" value="Cansel">
-    </div>
-    <div class="modal">
+    </form>
+    <form class="modal" id="modalWindow">
         <div class="modal_window">
-            <p class="modal-title">Ip-camera options</p>
-            <button data-hystclose class="modal__close">X</button>
-            <hr>
-            <p class="modal_text">Producer and model:</p>
-            <input type="text" name="" id="" class="producer" placeholder="Input name and model of ip-camera">
-            <p class="modal_text">Connection type:</p>
-            <select id="connect" name="connect">
-                <option value="Wi-Fi">Wi-Fi</option>
-                <option value="Ethernet">Ethernet</option>
-            </select>
-            <p class="modal_text">Resolution:</p>
-            <input type="number" name="" id="resolution" class="number" placeholder="Input resolution (Megapixels)">
-            <p class="modal_text">Size of matrix:</p>
-            <input type="number" name="" id="matrix_size" class="number" placeholder="Input size of matrix(1/x&#34;)">
-            <p class="modal_text">Focus distance:</p>
-            <input type="number" name="" id="focus_distance" class="number" placeholder="Input focus distance(mm)">
-            <p class="modal_text">Select image file:</p>
-            <input type="file" name="" id="file_input" class="file">
-            <button type="submit" class="edit" style="margin-left: auto;margin-right: auto;display: block;margin-top: 20px">Submit</button>
+            <div class="modal-title">
+                <span style="display: inline">Ip-camera options</span>
+                <button data-hystclose class="modal__close">&times</button>
+            </div>
+            <ul class="modal-list">
+
+                <li>
+                    <label class="modal_text" for="producer">Producer and model:</label>
+                    <input type="text" name="producer" id="producer" class="producer"
+                           placeholder="Input name and model of ip-camera">
+                </li>
+                <li>
+                    <label class="modal_text" for="connect">Connection type:</label>
+
+                    <div id="connect" style="font-family: Calibri,serif; text-align: center">
+                        <input type="radio" name="connect" id="Wi-Fi">
+                        <label for="Wi-Fi">Wi-Fi</label>
+                        <input type="radio" name="connect" id="Ethernet">
+                        <label for="Ethernet">Ethernet</label>
+                    </div>
+                </li>
+                <li>
+                    <label class="modal_text" for="resolution">Resolution:</label>
+                    <select id="resolution" name="resolution" class="combobox">
+                        <option value="HD">1280x720(HD)</option>
+                        <option value="1MP">1280x1024(1MP)</option>
+                        <option value="2MP">1600x1200(2MP)</option>
+                        <option value="Full-HD">1920x1080(Full-HD)</option>
+                        <option value="2K">2048x1080(2K)</option>
+                        <option value="4k">4096x2160(4K)</option>
+                        <option value="8K">7680x4320(8K)</option>
+                    </select>
+                </li>
+                <li>
+                    <label class="modal_text" for="matrix_size">Size of matrix:</label>
+                    <input type="number" name="matrix_size" id="matrix_size" class="number"
+                           placeholder="Input size of matrix(1/x&#34;)">
+                </li>
+                <li>
+                    <label class="modal_text" for="focus_distance">Focus distance:</label>
+                    <input type="number" name="focus_distance" id="focus_distance" class="number"
+                           placeholder="Input focus distance(mm)">
+                </li>
+                <li>
+                    <img id="modalCameraImage" alt="camera" src=""
+                         style="height: 230px;width: 230px;display: block;margin-right: auto;margin-left: auto;margin-top: 10px"><br>
+                    <label class="modal_text" for="file_input">Select image file:</label>
+                    <input type="file" name="file_input" id="file_input" class="file" onchange="showImage(this)">
+                </li>
+            </ul>
+            <button type="submit" class="edit"
+                    style="margin-left: auto;margin-right: auto;display: block;margin-top: 20px">Submit
+            </button>
         </div>
-    </div>
+    </form>
 </body>
+<script>
+    function showImage(imageElement) {
+        let image = document.getElementById("modalCameraImage");
+        image.src = URL.createObjectURL(imageElement.files[0]);
+    }
+
+    function displayModal() {
+        document.getElementById("modalWindow").style.display = "flex";
+    }
+</script>
 </html>
