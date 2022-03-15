@@ -1,0 +1,58 @@
+.footer{
+    background-color: DodgerBlue;
+    flex: 0 0 auto;
+    margin: 0 10px 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    line-height: 100px;
+    text-align: center;
+    font-family: Calibri,serif;
+    font-size: 48px;
+    color:white;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    flex: 1 0 auto;
+}
+
+.header{
+    margin: 5px 10px 0;
+    background-color: DodgerBlue;
+}
+
+aside{
+    width: 15%;
+}
+
+figcaption,nav,article,aside>div{
+    background-color: dodgerblue;
+    margin: 10px 0;
+}
+
+main{
+    width: 70%;
+    flex-grow: 1;
+}
+
+.center{
+    margin: 10px;
+    width: auto;
+}
