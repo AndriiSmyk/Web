@@ -1,0 +1,33 @@
+$borderStyle: solid red 3px;
+
+div{
+margin: 10px;
+  p{
+    font-family: Arial, serif;
+    font-size: 48px;
+  }
+}
+
+.first {
+  border: $borderStyle;
+  height: 100%;
+}
+
+.second {
+  @extend .first;
+  background: aqua;
+}
+
+@mixin mix($borderRadius:10px) {
+  border-radius: $borderRadius;
+}
+
+.third{
+  border: $borderStyle;
+  @include mix;
+}
+
+.fourth{
+  border: $borderStyle;
+  @include mix(150px);
+}

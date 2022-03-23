@@ -1,0 +1,28 @@
+div {
+  margin: 10px;
+}
+div p {
+  font-family: Arial, serif;
+  font-size: 48px;
+}
+
+.first, .second {
+  border: solid red 3px;
+  height: 100%;
+}
+
+.second {
+  background: aqua;
+}
+
+.third {
+  border: solid red 3px;
+  border-radius: 10px;
+}
+
+.fourth {
+  border: solid red 3px;
+  border-radius: 150px;
+}
+
+/*# sourceMappingURL=style.css.map */
